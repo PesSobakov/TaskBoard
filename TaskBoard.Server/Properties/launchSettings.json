@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "http://localhost:5221",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy",
+        "FRONTEND_SERVER": "https://localhost:53956",
+        "DATABASE_CONNECTION_STRING": "Server=localhost;Database=TaskBoard;User Id=testuser;Password=testuser;TrustServerCertificate=True;"
+      }
+    },
+    "https": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "applicationUrl": "https://localhost:7037;http://localhost:5221",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.SpaProxy",
+        "FRONTEND_SERVER": "https://localhost:53956",
+        "DATABASE_CONNECTION_STRING": "Server=localhost;Database=TaskBoard;User Id=testuser;Password=testuser;TrustServerCertificate=True;"
+      }
+    }
+  }
+}
+

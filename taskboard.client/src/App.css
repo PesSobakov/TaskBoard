@@ -1,0 +1,9 @@
+﻿#root {
+    width:100%;
+    text-align: left;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}

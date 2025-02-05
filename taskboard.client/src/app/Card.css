@@ -1,0 +1,20 @@
+.w-100{
+    width:100%;
+}
+
+.b-transparent{
+    color:black;
+    background-color:transparent;
+    border:none;
+}
+
+.b-transparent:hover {
+    color: black;
+    background-color: rgb(0, 0, 0, 0.1);
+    border: none;
+}
+
+
+.dropdown-toggle-disable::after {
+    display: none;
+}
