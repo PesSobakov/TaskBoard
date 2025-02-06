@@ -52,21 +52,21 @@ namespace TaskBoard.ServerTest
                                             Name="Card 1",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=0,
                                         },
                                         new Card(){
                                             Name="Card 2",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=1,
                                         },
                                         new Card(){
                                             Name="Card 3",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=2,
                                         },
                                     ]
@@ -79,21 +79,21 @@ namespace TaskBoard.ServerTest
                                             Name="Card 4",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=0,
                                         },
                                         new Card(){
                                             Name="Card 5",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=1,
                                         },
                                         new Card(){
                                             Name="Card 6",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=2,
                                         },
                                     ]
@@ -106,21 +106,21 @@ namespace TaskBoard.ServerTest
                                             Name="Card 7",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=0,
                                         },
                                         new Card(){
                                             Name="Card 8",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=1,
                                         },
                                         new Card(){
                                             Name="Card 9",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=2,
                                         },
                                     ]
@@ -141,21 +141,21 @@ namespace TaskBoard.ServerTest
                                             Name="Card 1",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=0,
                                         },
                                         new Card(){
                                             Name="Card 2",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=1,
                                         },
                                         new Card(){
                                             Name="Card 3",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=2,
                                         },
                                     ]
@@ -168,21 +168,21 @@ namespace TaskBoard.ServerTest
                                             Name="Card 4",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=0,
                                         },
                                         new Card(){
                                             Name="Card 5",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=1,
                                         },
                                         new Card(){
                                             Name="Card 6",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=2,
                                         },
                                     ]
@@ -195,21 +195,21 @@ namespace TaskBoard.ServerTest
                                             Name="Card 7",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=0,
                                         },
                                         new Card(){
                                             Name="Card 8",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=1,
                                         },
                                         new Card(){
                                             Name="Card 9",
                                             Description="Card description",
                                             Status = "Status",
-                                            DueDate = new DateTime(2025,1,1,1,1,1),
+                                            DueDate = new DateOnly(2025,1,1),
                                             Order=2,
                                         },
                                     ]
@@ -417,7 +417,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 1")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 0)
                 .Any()
             );
@@ -426,7 +426,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 2")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 1)
                 .Any()
             );
@@ -435,7 +435,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 3")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 2)
                 .Any()
             );
@@ -466,7 +466,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 4")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 0)
                 .Any()
             );
@@ -475,7 +475,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 5")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 1)
                 .Any()
             );
@@ -484,7 +484,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 6")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 2)
                 .Any()
             );
@@ -499,7 +499,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 7")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 0)
                 .Any()
             );
@@ -508,7 +508,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 8")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 1)
                 .Any()
             );
@@ -517,7 +517,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Card 9")
                 .Where(card => card.Description == "Card description")
                 .Where(card => card.Status == "Status")
-                .Where(card => card.DueDate == new DateTime(2025, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2025, 1, 1))
                 .Where(card => card.Order == 2)
                 .Any()
             );
@@ -705,7 +705,7 @@ namespace TaskBoard.ServerTest
                 Name = "Test Card",
                 Description = "Test Description",
                 Status = "Test Status",
-                DueDate = new DateTime(2026, 1, 1, 1, 1, 1),
+                DueDate = new DateOnly(2026, 1, 1) ,
             };
 
             var response = await _taskBoardDatabaseService.CreateCard("user@example.com", createCardDto);
@@ -717,7 +717,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Test Card")
                 .Where(card => card.Description == "Test Description")
                 .Where(card => card.Status == "Test Status")
-                .Where(card => card.DueDate == new DateTime(2026, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2026, 1, 1))
                 .Where(card => card.Order == 3)
                 .Any()
             );
@@ -736,7 +736,7 @@ namespace TaskBoard.ServerTest
             Assert.Equal("Card 1", response.Data.Name);
             Assert.Equal("Card description", response.Data.Description);
             Assert.Equal("Status", response.Data.Status);
-            Assert.Equal(new DateTime(2025, 1, 1, 1, 1, 1), response.Data.DueDate);
+            Assert.Equal(new DateOnly(2025, 1, 1), response.Data.DueDate);
             Assert.Equal(0, response.Data.Order);
             Assert.True(
                 response.Data.Comments
@@ -766,7 +766,7 @@ namespace TaskBoard.ServerTest
                 Name = "Test Card",
                 Description = "Test Description",
                 Status = "Test Status",
-                DueDate = new DateTime(2026, 1, 1, 1, 1, 1),
+                DueDate = new DateOnly(2026, 1, 1),
             };
 
             var response = await _taskBoardDatabaseService.EditCard("user@example.com", cardId, editCardDto);
@@ -777,7 +777,7 @@ namespace TaskBoard.ServerTest
                 .Where(card => card.Name == "Test Card")
                 .Where(card => card.Description == "Test Description")
                 .Where(card => card.Status == "Test Status")
-                .Where(card => card.DueDate == new DateTime(2026, 1, 1, 1, 1, 1))
+                .Where(card => card.DueDate == new DateOnly(2026, 1, 1))
                 .Any()
             );
         }

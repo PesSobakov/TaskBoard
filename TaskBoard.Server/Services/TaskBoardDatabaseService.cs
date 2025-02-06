@@ -86,7 +86,11 @@ namespace TaskBoard.Server.Services
         }
         public async Task<ServiceResponse> DeleteAccount(string login)
         {
-            User? user = await _taskBoardContext.Users.Where(user => user.Login == login).FirstOrDefaultAsync();
+            User? user = await _taskBoardContext.Users.Where(user => user.Login == login)
+                .Include(user=>user.Boards).ThenInclude(board => board.Lists).ThenInclude(list => list.Cards).ThenInclude(card => card.Comments)
+                .Include(user=>user.Boards).ThenInclude(board => board.Accesses)
+                .AsSplitQuery()
+                .FirstOrDefaultAsync();
             if (user == null) { return new ServiceResponse() { Status = ResponseStatus.BadRequest }; }
 
             _taskBoardContext.Remove(user);

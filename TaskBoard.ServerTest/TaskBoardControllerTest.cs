@@ -118,7 +118,7 @@ namespace TaskBoard.ServerTest
                                 Name="Card 1",
                                 Description="Card description",
                                 Status = "Status",
-                                DueDate = new DateTime(2025,1,1,1,1,1),
+                                DueDate = new DateOnly(2025,1,1),
                                 Order=0,
                                 Comments=[
                                     new Comment(){
@@ -151,7 +151,7 @@ namespace TaskBoard.ServerTest
                                 Name="Card 2",
                                 Description="Card description",
                                 Status = "Status",
-                                DueDate = new DateTime(2025,1,1,1,1,1),
+                                DueDate = new DateOnly(2025,1,1),
                                 Order=1,
                             },
                         ]
@@ -188,13 +188,13 @@ namespace TaskBoard.ServerTest
             Assert.Equal("Card 1", boardDto.Lists[0].Cards[0].Name);
             Assert.Equal("Card description", boardDto.Lists[0].Cards[0].Description);
             Assert.Equal("Status", boardDto.Lists[0].Cards[0].Status);
-            Assert.Equal(new DateTime(2025, 1, 1, 1, 1, 1), boardDto.Lists[0].Cards[0].DueDate);
+            Assert.Equal(new DateOnly(2025, 1, 1), boardDto.Lists[0].Cards[0].DueDate);
             Assert.Equal(0, boardDto.Lists[0].Cards[0].Order);
             Assert.Equal(2, boardDto.Lists[0].Cards[1].Id);
             Assert.Equal("Card 2", boardDto.Lists[0].Cards[1].Name);
             Assert.Equal("Card description", boardDto.Lists[0].Cards[1].Description);
             Assert.Equal("Status", boardDto.Lists[0].Cards[1].Status);
-            Assert.Equal(new DateTime(2025, 1, 1, 1, 1, 1), boardDto.Lists[0].Cards[1].DueDate);
+            Assert.Equal(new DateOnly(2025, 1, 1), boardDto.Lists[0].Cards[1].DueDate);
             Assert.Equal(1, boardDto.Lists[0].Cards[1].Order);
             Assert.Equal(2, boardDto.Lists[0].Cards[0].Comments.Count);
             Assert.Equal(1, boardDto.Lists[0].Cards[0].Comments[0].Id);
@@ -220,7 +220,7 @@ namespace TaskBoard.ServerTest
                 Name = "Card 1",
                 Description = "Card description",
                 Status = "Status",
-                DueDate = new DateTime(2025, 1, 1, 1, 1, 1),
+                DueDate = new DateOnly(2025, 1, 1),
                 Order = 0,
                 Comments = [
                     new Comment(){
@@ -261,7 +261,7 @@ namespace TaskBoard.ServerTest
             Assert.Equal("Card 1", cardDto.Name);
             Assert.Equal("Card description", cardDto.Description);
             Assert.Equal("Status", cardDto.Status);
-            Assert.Equal(new DateTime(2025, 1, 1, 1, 1, 1), cardDto.DueDate);
+            Assert.Equal(new DateOnly(2025, 1, 1), cardDto.DueDate);
             Assert.Equal(0, cardDto.Order);
             Assert.Equal(1, cardDto.Comments[0].Id);
             Assert.Equal("Comment text 1", cardDto.Comments[0].Text);
